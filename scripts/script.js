@@ -1,16 +1,23 @@
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+// ============================
+//   Navbar Hamburger Toggle
+// ============================
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-// Toggle menu on mobile
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+
+  // Accessibility
+  const isExpanded = hamburger.classList.contains('active');
+  hamburger.setAttribute('aria-expanded', isExpanded);
 });
 
-// Highlight active nav link
+// Close menu when clicking a link (mobile)
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    link.classList.add('active');
-    navLinks.classList.remove('open'); // close nav on click
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', false);
   });
 });

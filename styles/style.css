@@ -1,41 +1,57 @@
-/* styles.css */
-
-:root {
-  --violet: #6c63ff;
-  --violet-dark: #4b41cc;
-  --white: #ffffff;
-  --light-gray: #f3f1ff;
-  --text-dark: #333333;
-
-  /* spacing & radii */
-  --radius: 14px;
-  --card-bg: linear-gradient(180deg, rgba(108,99,255,0.04), rgba(108,99,255,0.01));
-  --glass-border: rgba(255,255,255,0.06);
-}
+/* =========================================
+   styles.css - Complete CSS with Comments
+   ========================================= */
 
 
+/* ==============================
+   CSS Reset
+   ============================== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  /* font-family: "Poppins", sans-serif; */
+  margin: 0;                 /* Remove default margins */
+  padding: 0;                /* Remove default padding */
+  box-sizing: border-box;    /* Include padding/border in element's total width/height */
+  scroll-behavior: smooth;   /* Smooth scrolling for anchors */
 }
 
+
+/* ==============================
+   Root Variables
+   ============================== */
+:root {
+  /* Color Palette */
+  --violet: #6c63ff;          /* Primary violet */
+  --violet-dark: #4b41cc;     /* Darker shade for hover/accents */
+  --white: #ffffff;            /* White color */
+  --light-gray: #f3f1ff;      /* Background color */
+  --text-dark: #333333;       /* Default text color */
+
+  /* Other variables */
+  --radius: 14px;              /* Standard border radius */
+  --card-bg: linear-gradient(180deg, rgba(108,99,255,0.04), rgba(108,99,255,0.01)); /* Card gradient */
+  --glass-border: rgba(255,255,255,0.06);  /* Glass effect border */
+}
+
+
+/* ==============================
+   Global Styles
+   ============================== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--light-gray);
-  color: var(--text-dark);
+  background-color: var(--light-gray); /* Body background */
+  color: var(--text-dark);             /* Default text color */
 }
- 
 
 
+/* ==============================
+   Section Styles
+   ============================== */
 section {
-  position: relative;
+  position: relative; /* For pseudo-element positioning */
   padding-bottom: 60px;
-  border-bottom: 1px solid rgba(108, 99, 255, 0.2);
+  border-bottom: 1px solid rgba(108, 99, 255, 0.2); /* Light violet bottom border */
 }
 
+/* Shadow under each section */
 section::after {
   content: '';
   position: absolute;
@@ -48,70 +64,81 @@ section::after {
 }
 
 
-/* Navbar Container */
-
+/* ==============================
+   Navbar Styles
+   ============================== */
 .navbar {
-  display: flex;
-  justify-content: space-between; /* Logo on left, nav links on right */
-  align-items: center;
+  display: flex;                   /* Flex for horizontal layout */
+  justify-content: space-between;  /* Logo left, nav links right */
+  align-items: center;             /* Vertically center items */
   padding: 15px 40px;
   background-color: var(--white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  /* position: sticky; */
   top: 0;
-  z-index: 100;
+  z-index: 100;                    /* Stay on top */
 }
 
-/* Logo + Welcome Text */
+
+/* ------------------------------
+   Logo Styles
+   ------------------------------ */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 12px; /* Space between logo image and text */
 }
 
 .logo img {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%;         /* Circular image */
+  transition: transform 0.3s; /* Smooth scale effect */
 }
 
-/* Make the "Welcome to my page" a clickable home link */
+.logo img:hover {
+  transform: scale(1.5);      /* Zoom on hover */
+}
+
+/* Logo link styles */
 .logo a {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-dark);
   cursor: pointer;
-  transition: color 0.3s;
-  
+  transition: color 0.3s;      /* Smooth color change */
 }
 
+/* Hover effect on welcome text */
 .logo p:hover {
   color: var(--violet-dark);
 }
 
-/* Nav Links */
+
+/* ------------------------------
+   Navigation Links
+   ------------------------------ */
 .nav-links {
   display: flex;
-  gap: 25px;
-  list-style: none;
+  gap: 25px;     /* Space between links */
+  list-style: none; /* Remove bullets */
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s, transform 0.2s;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.2s; /* Smooth hover effects */
 }
 
 .nav-links a:hover {
-  color: var(--violet-dark);
-  transform: translateY(-2px);
+  color: var(--violet-dark);      /* Change color on hover */
+  transform: translateY(-2px);    /* Slight upward movement */
 }
 
-/* Optional: Add a slight underline animation on hover */
+/* Optional underline animation */
 .nav-links a::after {
   content: '';
   display: block;
@@ -123,31 +150,34 @@ section::after {
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+  width: 100%; /* Full underline on hover */
 }
 
 
-
-/* Home Section - Full Height Hero */
+/* ==============================
+   Home Section - Hero
+   ============================== */
 .home-section {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
   padding: 0 5%;
-  min-height: 100vh; /* full viewport height */
-  /* max-width: 1200px; */
+  min-height: 100vh; /* Full viewport height */
   margin: 0 auto;
   background-color: var(--light-gray);
   position: relative;
   overflow: hidden;
 }
 
-/* Left Image */
+
+/* ------------------------------
+   Left Image
+   ------------------------------ */
 .home-image {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* slightly away from left edge */
+  justify-content: flex-end;
 }
 
 .home-image img {
@@ -162,9 +192,13 @@ section::after {
 
 .home-image img:hover {
   transform: scale(1.05);
+  box-shadow: 10px 20px 24px var(--violet);
 }
 
-/* Right Content */
+
+/* ------------------------------
+   Right Content
+   ------------------------------ */
 .home-text {
   flex: 1;
   display: flex;
@@ -191,12 +225,12 @@ section::after {
 }
 
 .home-text h1 span {
-  color: var(--violet);
+  color: var(--violet); /* Highlighted part of name */
 }
 
 /* Role */
 .home-text h3 {
-  font-size: 1.6rem;   /* bigger and bolder */
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--text-dark);
   margin-top: 5px;
@@ -204,8 +238,8 @@ section::after {
 
 /* Pitch / Tagline */
 .home-pitch {
-  font-size: 1.1rem;   /* smaller than role */
-  font-weight: 500;     /* lighter than role */
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--text-dark);
   margin-top: 12px;
   line-height: 1.6;
@@ -217,11 +251,13 @@ section::after {
 }
 
 
-/* Buttons */
+/* ------------------------------
+   Buttons
+   ------------------------------ */
 .home-buttons {
   margin-top: 35px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   gap: 20px;
 }
 
@@ -240,7 +276,10 @@ section::after {
   transform: translateY(-2px);
 }
 
-/* Section bottom shadow */
+
+/* ------------------------------
+   Section Bottom Shadow
+   ------------------------------ */
 .home-section::after {
   content: '';
   position: absolute;
@@ -251,65 +290,73 @@ section::after {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
 }
+/* =========================================
+   About Section CSS
+   ========================================= */
 
 
-
-
-
-
-/* ===== Base Styles ===== */
-
-
+/* ==============================
+   Base Styles
+   ============================== */
 section.about-main {
-  padding: 3rem 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  color: var(--violet-dark);
+  padding: 3rem 1.5rem;       /* Vertical and horizontal padding */
+  max-width: 1200px;          /* Limit section width */
+  margin: 0 auto;             /* Center section */
+  color: var(--violet-dark);  /* Default text color for this section */
 }
 
-/* ===== Image & Summary Layout ===== */
+
+/* ==============================
+   About Section - Image & Summary Layout
+   ============================== */
 .about-image-summary {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
+  display: flex;              /* Horizontal layout */
+  align-items: center;        /* Vertically center items */
+  gap: 2rem;                  /* Space between image and summary */
+  flex-wrap: wrap;            /* Wrap items on smaller screens */
+  margin-bottom: 3rem;        /* Space below this section */
 }
 
+/* About Image */
 .about-image {
-  flex: 1 1 250px;
-  max-width: 300px;
-  text-align: center;
+  flex: 1 1 250px;            /* Flex-grow, flex-shrink, base width */
+  max-width: 300px;           /* Limit maximum image width */
+  text-align: center;         /* Center image inside container */
 }
 
 .about-image img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px var(--violet);
-  transition: transform 0.3s;
+  width: 100%;                /* Full container width */
+  border-radius: 12px;        /* Rounded corners */
+  object-fit: cover;          /* Maintain aspect ratio, cover container */
+  box-shadow: 0 4px 15px var(--violet); /* Violet shadow */
+  transition: transform 0.3s; /* Smooth hover zoom effect */
 }
+
 .about-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);     /* Slight zoom on hover */
 }
 
+/* About Summary */
 .about-summary {
-  flex: 2 1 400px;
+  flex: 2 1 400px;            /* Take more space than image */
 }
 
+/* About Header */
 .about-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem;                  /* Space between title and badge */
   margin-bottom: 1rem;
 }
 
+/* Title */
 .about-title {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--violet-dark); /* violet theme */
+  color: var(--violet-dark);   /* Violet theme */
 }
 
+/* Badge for current status */
 .badge-current {
   background-color: var(--violet);
   color: #fff;
@@ -318,16 +365,23 @@ section.about-main {
   font-size: 0.9rem;
 }
 
+/* Summary content */
 .summary-content {
-  line-height: 1.6;
+  line-height: 1.6;           /* Spacing between lines */
 }
 
+/* Paragraphs */
 .about-paragraph {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;        /* Space below each paragraph */
   color: black;
 }
 
-/* ===== Skills Section ===== */
+
+/* ==============================
+   Skills Section
+   ============================== */
+
+/* Section Title */
 .section-title {
   font-size: 1.7rem;
   font-weight: 600;
@@ -337,25 +391,28 @@ section.about-main {
   text-align: left;
 }
 
+/* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+  gap: 1.5rem;                  /* Space between skill cards */
 }
 
+/* Skill Card */
 .skill-card {
   background: linear-gradient(135deg, #f8f5ff, #ffffff);
   border-radius: 12px;
   padding: 1.2rem;
   box-shadow: 0 4px 10px var(--violet);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px var(--violet) ;
+  transform: translateY(-5px);     /* Lift card on hover */
+  box-shadow: 0 8px 18px var(--violet); /* Deeper shadow */
 }
 
+/* Skill Title */
 .skill-title {
   font-size: 1.2rem;
   color: var(--violet-dark);
@@ -363,20 +420,21 @@ section.about-main {
   font-weight: 600;
 }
 
+/* Skill List */
 .skill-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  list-style: none;          /* Remove bullets */
+  display: flex;             /* Horizontal layout */
+  flex-wrap: wrap;           /* Wrap items */
+  gap: 0.5rem;               /* Space between skill items */
 }
 
+/* Individual Skill Item */
 .skill-list li {
   background-color: var(--white);
   color: var(--violet);
   padding: 0.3rem 0.7rem;
   border: 2.5px solid var(--violet-dark);
   border-radius: 20px;
-  border-color: var(--violet-dark);
   font-size: 0.85rem;
   font-weight: 500;
   transition: background-color 0.3s ease;
@@ -385,16 +443,19 @@ section.about-main {
 .skill-list li:hover {
   background-color: var(--violet);
   color: var(--white);
-  
 }
 
+
+/* ==============================
+   Timeline Section
+   ============================== */
 .timeline {
   position: relative;
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 40px auto;       /* Center timeline with spacing */
 }
 
-/* Vertical line */
+/* Vertical line for timeline */
 .timeline::after {
   content: '';
   position: absolute;
@@ -402,8 +463,8 @@ section.about-main {
   background-color: var(--violet);
   top: 0;
   bottom: 0;
-  left: 50%;
-  margin-left: -2px;
+  left: 50%;               /* Centered */
+  margin-left: -2px;       /* Half width offset */
 }
 
 /* Timeline containers */
@@ -424,17 +485,17 @@ section.about-main {
   border: 4px solid var(--white);
   top: 20px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 1;              /* Above other content */
 }
 
-/* Left containers */
+/* Left Containers */
 .container.left {
   left: 0;
-  text-align: right; /* Align content to right */
+  text-align: right;       /* Align content to right */
 }
 
 .container.left::after {
-  right: -12px; /* Circle aligned to the vertical line */
+  right: -12px;            /* Circle aligned to vertical line */
 }
 
 .container.left::before {
@@ -442,14 +503,14 @@ section.about-main {
   position: absolute;
   top: 27px;
   right: 20px;
-  border: 10px solid transparent;
+  border: 10px solid transparent; /* Create triangle pointer */
   border-left-color: var(--light-gray);
 }
 
-/* Right containers */
+/* Right Containers */
 .container.right {
   left: 50%;
-  text-align: left; /* Align content to left */
+  text-align: left;        /* Align content to left */
 }
 
 .container.right::after {
@@ -465,14 +526,14 @@ section.about-main {
   border-right-color: var(--light-gray);
 }
 
-/* Content boxes */
+/* Content Box */
 .container .content {
   padding: 20px;
   background-color: var(--light-gray);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
   display: inline-block;
-  max-width: 90%; /* Prevent overflow */
+  max-width: 90%;           /* Prevent overflow */
 }
 
 .container .content h4 {
@@ -493,84 +554,45 @@ section.about-main {
   color: var(--text-dark);
 }
 
-/* Highlight current item */
+/* Highlight Current Timeline Item */
 .container.current::after {
   background-color: var(--violet-dark);
   box-shadow: 0 0 0 4px var(--light-gray);
 }
 
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
-  .timeline::after {
-    left: 20px;
-  }
-
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-  .container.left, .container.right {
-    left: 0;
-    text-align: left;
-  }
-
-  .container::before {
-    left: 60px;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--light-gray) transparent transparent;
-  }
-
-  .container.left::after, .container.right::after {
-    left: 15px;
-  }
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .about-image-summary {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-header {
-    justify-content: center;
-  }
-
-  .about-summary {
-    text-align: center;
-  }
-
-  .section-title {
-    text-align: center;
-  }
-
-}
 
 
+/* =========================================
+   Projects Section CSS
+   (No changes — only added comments & structure)
+   ========================================= */
 
 
-
-
-
-
-
-/* PROJECT SECTION */
-
-/* Projects Section Styles */
+/* ------------------------------
+   Projects Section Container
+   ------------------------------
+   - Main wrapper for the projects area.
+   - Centers content and gives vertical padding.
+*/
 .projects-section {
   padding: 60px 20px;
   background-color: var(--light-gray);
   text-align: center;
 }
 
+/* Section Heading */
 .projects-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.5rem;         /* Large, prominent title */
   color: var(--text-dark);
-  margin-bottom: 40px;
+  margin-bottom: 40px;       /* Space between title and projects */
 }
 
+/* ------------------------------
+   Projects Grid / Container
+   ------------------------------
+   - Uses flexbox to wrap project cards responsively.
+   - Centers cards horizontally and controls gap between them.
+*/
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -578,6 +600,13 @@ section.about-main {
   justify-content: center;
 }
 
+/* ------------------------------
+   Individual Project Card
+   ------------------------------
+   - Card background uses the card gradient variable.
+   - Fixed card width for consistent layout; flexible for wrapping.
+   - Subtle transitions for hover interactions.
+*/
 .project-card {
   background: var(--card-bg);
   border-radius: var(--radius);
@@ -589,28 +618,42 @@ section.about-main {
   align-items: center;
 }
 
+/* Project Card Image
+   - Full-width inside card, rounded using the same radius variable.
+*/
 .project-card img {
   width: 100%;
   border-radius: var(--radius);
   margin-bottom: 15px;
 }
 
+/* Project Title */
 .project-card h3 {
   color: var(--text-dark);
   margin-bottom: 10px;
 }
 
+/* Highlighted text inside project description
+   - Use <span> inside <p> to emphasize (weight + violet color).
+*/
 .project-card p span {
   font-weight: 500;
   color: var(--violet-dark);
 }
 
+/* Project Description Paragraph */
 .project-card p {
   font-size: 0.95rem;
   color: var(--text-dark);
   margin-bottom: 15px;
 }
 
+/* ------------------------------
+   Project Buttons Row
+   ------------------------------
+   - Horizontal layout for action buttons (Repo / Demo).
+   - Wraps on small screens to avoid overflow.
+*/
 .project-buttons {
   display: flex;
   gap: 15px;
@@ -618,6 +661,13 @@ section.about-main {
   justify-content: center;
 }
 
+/* ------------------------------
+   Button Base (shared)
+   ------------------------------
+   - Shared base class for buttons in the project cards.
+   - Note: .btn may also be defined elsewhere in your stylesheet; here
+     it provides these exact paddings / transitions for project buttons.
+*/
 .btn {
   padding: 10px 18px;
   border-radius: var(--radius);
@@ -626,17 +676,25 @@ section.about-main {
   transition: all 0.3s ease;
 }
 
+/* Repo button (primary) */
 .repo-btn {
   background-color: var(--violet);
   color: var(--white);
 }
 
+/* Demo button (outlined / transparent) */
 .demo-btn {
   background-color: transparent;
   color: var(--violet);
   border: 2px solid var(--violet);
 }
 
+/* ------------------------------
+   Button Hover States
+   ------------------------------
+   - Upward transform + shadow for tactile feel.
+   - Hover colors for repo / demo variants.
+*/
 .btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -652,37 +710,28 @@ section.about-main {
   border-color: var(--violet-dark);
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .projects-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
 
-@media (max-width: 768px) {
-  .project-card {
-    width: 90%;
-  }
-}
-
-
-
-
-
-
-/* CONTACT SECTION */
-
+/* =========================================
+   CONTACT SECTION CSS
+   (No changes — only added comments & structure)
+   ========================================= */
 
 
 /* ===== CONTACT SECTION ===== */
+/* Main contact section wrapper:
+   - Uses a background image, covers the area, and provides padding.
+   - Text color is white (uses CSS variable).
+*/
 .contact-section {
   position: relative;
-  background: url('../contact-image.jpg') center/cover no-repeat;
+  background: url('../assets/contact-image.jpg') center/cover no-repeat;
   padding: 60px 20px;
   color: var(--white);
 }
 
+/* Dark overlay to make text readable over the background image.
+   Implemented using a pseudo-element so background remains visible.
+*/
 .contact-section::before {
   content: "";
   position: absolute;
@@ -691,13 +740,17 @@ section.about-main {
   z-index: 0;
 }
 
+/* Ensure all direct children render above the overlay.
+   This sets position and stacking context for inner content.
+*/
 .contact-section * {
   position: relative;
   z-index: 1;
 }
 
-
-
+/* Additional overlay element used in markup (keeps behavior same as ::before)
+   - Full-cover, darker overlay
+*/
 .contact-overlay {
   position: absolute;
   top: 0;
@@ -708,6 +761,10 @@ section.about-main {
   z-index: 0;
 }
 
+/* Container for the contact content:
+   - Two-column layout using flex with wrapping for smaller screens.
+   - Centers content and keeps gap between columns.
+*/
 .contact-container {
   display: flex;
   max-width: 1100px;
@@ -718,7 +775,12 @@ section.about-main {
   flex-wrap: wrap;
 }
 
-/* Left Side */
+
+/* ------------------------------
+   Left Side — Contact Info
+   ------------------------------
+   - Holds headings, contact list and social links.
+*/
 .contact-info {
   flex: 1;
   min-width: 300px;
@@ -736,6 +798,7 @@ section.about-main {
   color: var(--violet);
 }
 
+/* Contact info list styling */
 .info-list {
   list-style: none;
   margin: 0;
@@ -755,6 +818,7 @@ section.about-main {
   font-size: 1.2rem;
 }
 
+/* Links inside info list */
 .info-list li a {
   color: var(--white);
   text-decoration: none;
@@ -765,6 +829,7 @@ section.about-main {
   color: var(--violet);
 }
 
+/* Social links row */
 .social-links {
   display: flex;
   align-items: center;
@@ -772,6 +837,7 @@ section.about-main {
   margin-top: 10px;
 }
 
+/* Individual social icon link */
 .social-links a {
   display: inline-flex;
   align-items: center;
@@ -788,6 +854,7 @@ section.about-main {
   background: var(--violet-dark);
 }
 
+/* If using images inside social links */
 .social-links img {
   width: 34px;
   height: 34px;
@@ -796,7 +863,12 @@ section.about-main {
   /* filter: brightness(0) invert(1); */
 }
 
-/* Right Side */
+
+/* ------------------------------
+   Right Side — Contact Form
+   ------------------------------
+   - Glass-like form container with blur backdrop.
+*/
 .contact-form-container {
   flex: 1;
   min-width: 300px;
@@ -812,6 +884,7 @@ section.about-main {
   text-align: center;
 }
 
+/* Form inputs & textarea */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -828,11 +901,13 @@ section.about-main {
   resize: vertical;
 }
 
+/* Buttons row inside the form */
 .form-buttons {
   display: flex;
   justify-content: space-between;
 }
 
+/* Generic .btn styling (note: .btn may be used elsewhere too) */
 .btn {
   background: var(--violet);
   color: var(--white);
@@ -848,6 +923,7 @@ section.about-main {
   background: var(--violet-dark);
 }
 
+/* Reset button variant inside contact form */
 .btn.reset {
   background: transparent;
   border: 2px solid var(--violet);
@@ -859,20 +935,32 @@ section.about-main {
 }
 
 
+/* =========================================
+   FOOTER SECTION CSS
+   (No changes — only added comments & structure)
+   ========================================= */
 
 
-
-
-
-
-/* Footer Section */
+/* ------------------------------
+   Footer Section Wrapper
+   ------------------------------
+   - Provides overall footer styling with padding.
+   - Text uses violet-dark color for contrast.
+   - Font family is consistent with the site theme.
+*/
 .footer-section {
-  /* background-color: var(--violet-dark); */
+  /* background-color: var(--violet-dark); */ /* Optional background if needed */
   color: var(--violet-dark);
   padding: 50px 20px 20px 20px;
   font-family: 'Poppins', sans-serif;
 }
 
+/* ------------------------------
+   Footer Container
+   ------------------------------
+   - Flex layout for footer columns (Brand, Links, Contact, Social).
+   - Wraps on smaller screens and centers with max-width.
+*/
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -882,17 +970,27 @@ section.about-main {
   justify-content: space-between;
 }
 
+/* Footer Headings */
 .footer-section h2,
 .footer-section h3 {
   color: var(--violet);
   margin-bottom: 15px;
 }
 
+/* Footer Brand Paragraph
+   - Used for short description or about text.
+*/
 .footer-brand p {
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
+/* ------------------------------
+   Footer Links & Contact Lists
+   ------------------------------
+   - Both share similar list styling.
+   - No bullet points, clean spacing between items.
+*/
 .footer-links ul,
 .footer-contact ul {
   list-style: none;
@@ -904,6 +1002,7 @@ section.about-main {
   margin-bottom: 10px;
 }
 
+/* Links inside footer lists */
 .footer-links ul li a,
 .footer-contact ul li a {
   color: var(--violet-dark);
@@ -916,7 +1015,12 @@ section.about-main {
   color: var(--violet);
 }
 
-/* Social Media */
+/* ------------------------------
+   Social Media Icons Section
+   ------------------------------
+   - Displays social icons in a row with gaps.
+   - Icons scale slightly on hover for interaction.
+*/
 .footer-social .social-icons {
   display: flex;
   gap: 15px;
@@ -934,7 +1038,13 @@ section.about-main {
   transform: scale(1.1);
 }
 
-/* Footer Bottom */
+/* ------------------------------
+   Footer Bottom Bar
+   ------------------------------
+   - Horizontal bar at the bottom for copyright.
+   - Uses dark violet background with white text.
+   - Rounded corners for smooth edges.
+*/
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
@@ -946,36 +1056,11 @@ section.about-main {
   border-radius: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 25px;
-  }
-  .footer-social .social-icons {
-    justify-content: flex-start;
-  }
-}
 
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .form-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-
-
-
-
-
-
+/* =========================================
+   RESPONSIVE RULES (originals, preserved)
+   ========================================= */
 
 /* NAV BAR */
 /* Responsive for mobile */
@@ -1058,4 +1143,185 @@ section.about-main {
     height: 280px;
   }
 }
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .container.left, .container.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .container::before {
+    left: 60px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--light-gray) transparent transparent;
+  }
+
+  .container.left::after, .container.right::after {
+    left: 15px;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .about-image-summary {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-header {
+    justify-content: center;
+  }
+
+  .about-summary {
+    text-align: center;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+}
+
+
+/* For Project */
+/* Responsive */
+@media (max-width: 992px) {
+  .projects-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 90%;
+  }
+}
+
+
+
+/* For Footer  */
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .footer-social .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ============================
+   Hamburger Menu Styles
+============================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  gap: 5px;
+  z-index: 1001; /* Ensures hamburger stays above nav menu */
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--violet);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ============================
+   Responsive: Show Hamburger
+============================ */
+@media (max-width: 768px) {
+  /* Make navbar a positioning context */
+  .navbar {
+    position: sticky;
+    z-index: 1000;
+    align-items: flex-end;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Mobile Nav Links Dropdown */
+  .nav-links {
+    display: none; /* Hidden initially */
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    position: absolute;
+    top: 100%;            /* Appear right below navbar */
+    right: 20px;
+    width: 220px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    animation: slideDown 0.3s ease;
+    z-index: 999;         /* Ensures menu appears above content */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Hamburger to "X" animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+/* ============================
+   Slide Down Animation
+============================ */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 

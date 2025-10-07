@@ -5,345 +5,347 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manoj B - Portfolio</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" href="assets/logo_mj.png">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="Logo 2.png" alt="Logo">
-      <a href="#home"><p>Welcome to my page</p></a>
-
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </ul>
-    </nav>
-  </header>
- <!-- Home Section -->
-<section id="home" class="home-section">
-  <!-- Left: Image -->
-  <div class="home-image">
-    <img src="homeimg.JPG" alt="Manoj B" />
+  <!-- =======================
+       Navbar Section
+  ======================== -->
+<header class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="assets/logo_mj.png" alt="Logo">
+    <a href="#home"><p>Welcome to my page</p></a>
   </div>
 
-  <!-- Right: Text Content -->
-  <div class="home-text">
-    <h2>Hey Folks,</h2>
-    <h1>I'm <span>Manoj B</span></h1>
-    <h3>Software Engineer & Freelancer</h3>
-
-    <!-- Bold Pitch / Tagline -->
-    <h4 class="home-pitch">
-      Crafting software experiences that <span>excite, inspire</span> and actually get used.<br>
-      Where ideas meet <span>impact</span> and clients see results that matter.
-    </h4>
-
-    <div class="home-buttons">
-      <a href="ManojB_Resume.pdf" download class="btn">Download Resume</a>
-      <a href="#contact" class="btn">Contact Me</a>
-      <a href="https://github.com/King-Manoj" class="btn" target="_blank">GitHub</a>
-    </div>
+  <!-- Hamburger Menu Button (Visible on Mobile) -->
+  <div class="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-</section>
+
+  <!-- Navigation Links -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
 
 
+  <!-- =======================
+       Home Section
+  ======================== -->
+  <section id="home" class="home-section">
 
-
-
-<!-- About html -->
-
-<section class="about-main" id="about">
-  <div class="about-image-summary">
-    <div class="about-image">
-      <img src="About Image.jpg" alt="Manoj B — portrait" />
+    <!-- Left: Image -->
+    <div class="home-image">
+      <img src="assets/homeimg.JPG" alt="Manoj B" />
     </div>
-    <div class="about-summary">
-      <header class="about-header">
-        <h2 class="about-title">About Myself</h2>
-        <span class="badge-current">● Freelancing</span>
-      </header>
 
-      <div class="summary-content">
-        <p class="about-paragraph">
-          I'm a dedicated and curious Software Engineer with a solid grasp of Core Java, OOP principles,
-          and front-end technologies like HTML, CSS, JavaScript and React.js. I also have hands-on experience
-          with MySQL and a strong foundation in Data Structures and Algorithms, which I regularly practice on
-          LeetCode and CodeChef.
-        </p>
+    <!-- Right: Text Content -->
+    <div class="home-text">
+      <h2>Hey Folks,</h2>
+      <h1>I'm <span>Manoj B</span></h1>
+      <h3>Software Engineer & Freelancer</h3>
 
-        <p class="about-paragraph">
-          I learn quickly and adapt well — I enjoy mentoring others as a DSA and programming trainer, and I aim
-          to build impactful software while continuously growing as a developer.
-        </p>
+      <!-- Bold Pitch / Tagline -->
+      <h4 class="home-pitch">
+        Crafting software experiences that <span>excite, inspire</span> and actually get used.<br>
+        Where ideas meet <span>impact</span> and clients see results that matter.
+      </h4>
 
+      <!-- Home Buttons -->
+      <div class="home-buttons">
+        <a href="ManojB_Resume.pdf" download class="btn">Download Resume</a>
+        <a href="#contact" class="btn">Contact Me</a>
+        <a href="https://github.com/King-Manoj" class="btn" target="_blank">GitHub</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Skills -->
-      <h3 class="section-title" id="skills">Skills</h3>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h4 class="skill-title">Frontend</h4>
-          <ul class="skill-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-          </ul>
-        </div>
+  <!-- =======================
+       About Section
+  ======================== -->
+  <section class="about-main" id="about">
+    <div class="about-image-summary">
+      
+      <!-- About Image -->
+      <div class="about-image">
+        <img src="assets/About Image.jpg" alt="Manoj B — portrait" />
+      </div>
 
-        <div class="skill-card">
-          <h4 class="skill-title">Backend</h4>
-          <ul class="skill-list">
-            <li>Java</li>
-            <li>Servlet</li>
-            <li>JSP</li>
-            <li>Spring-boot</li>
-          </ul>
-        </div>
+      <!-- About Summary -->
+      <div class="about-summary">
+        <header class="about-header">
+          <h2 class="about-title">About Myself</h2>
+          <span class="badge-current">● Freelancing</span>
+        </header>
 
-        <div class="skill-card">
-          <h4 class="skill-title">Database</h4>
-          <ul class="skill-list">
-            <li>MySQL</li>
-            <li>Queries</li>
-            <li>Schema Design</li>
-          </ul>
-        </div>
+        <div class="summary-content">
+          <p class="about-paragraph">
+            I'm a dedicated and curious Software Engineer with a solid grasp of Core Java, OOP principles,
+            and front-end technologies like HTML, CSS, JavaScript and React.js. I also have hands-on experience
+            with MySQL and a strong foundation in Data Structures and Algorithms, which I regularly practice on
+            LeetCode and CodeChef.
+          </p>
 
-        <div class="skill-card">
-          <h4 class="skill-title">Other</h4>
-          <ul class="skill-list">
-            <li>DSA</li>
-            <li>Competitive Coding</li>
-            <li>Problem Solving</li>
-          </ul>
+          <p class="about-paragraph">
+            I learn quickly and adapt well — I enjoy mentoring others as a DSA and programming trainer, and I aim
+            to build impactful software while continuously growing as a developer.
+          </p>
         </div>
       </div>
-
-
- <!-- Experience -->
-<h3 class="section-title" id="experience">Experience</h3>
-<div class="timeline" >
-
-  <div class="container left current">
-    <div class="content">
-      <h4>Freelance Software Engineer</h4>
-      <span>Present - Self Employed</span>
-      <p>Software solutions & services, DSA training and placement advising</p>
     </div>
-  </div>
 
-  <div class="container right">
-    <div class="content">
-      <h4>DSA & Programming Trainer</h4>
-      <span>Adhi College of Engineering</span>
-      <p>Oct 2024 - Dec 2024 (Part-time), Jan 2025 - May 2025 (Full-time)</p>
-    </div>
-  </div>
-
-</div>
-
-
-<!-- Education -->
-<h3 class="section-title" id="education">Education</h3>
-<div class="timeline" >
-
-  <div class="container left">
-    <div class="content">
-      <h4>B.E - Computer Science & Engineering</h4>
-      <span>Adhi College of Engineering & Technology</span>
-      <p>CGPA: 8.5</p>
-    </div>
-  </div>
-
-  <div class="container right">
-    <div class="content">
-      <h4>HSC</h4>
-      <span>St. Francis Matric Higher Secondary School</span>
-      <p>91%</p>
-    </div>
-  </div>
-
-  <div class="container left">
-    <div class="content">
-      <h4>SSLC</h4>
-      <span>St. Francis Matric Higher Secondary School</span>
-      <p><strong>89.4%</strong></p>
-    </div>
-  </div>
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-  
-<!-- Projects Section -->
-<section id="projects" class="projects-section">
-  <h2>Projects</h2>
-  <div class="projects-container">
-    <div class="project-card">
-      <img src="portfolio-img.png" alt="Project 1" />
-      <h3>Personal Portfolio</h3>
-      <p><span><strong>Tech Stack used:</strong> HTML, CSS, JavaScript</span></p>
-      <p>Built my own website, learned responsiveness, implemented interactive features, smooth transitions, and enhanced UI/UX using CSS and JavaScript.</p>
-      <div class="project-buttons">
-        <a href="https://github.com/King-Manoj/Personal-Portfolio---Manoj_B.git" class="btn repo-btn" target="_blank">GitHub</a>
-        <a href="https://king-manoj.github.io/Personal-Portfolio---Manoj_B/" class="btn demo-btn" target="_blank">View Demo</a>
+    <!-- =======================
+         Skills Section
+    ======================== -->
+    <h3 class="section-title" id="skills">Skills</h3>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4 class="skill-title">Frontend</h4>
+        <ul class="skill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
       </div>
-    </div>
-    <div class="project-card">
-      <img src="doctor-appointment-img.png" alt="Project 2" />
-      <h3>Doctor Appointment Booking System</h3>
-      <p><span><strong>Tech Stack used:</strong> HTML, CSS, JavaScript, React, Tailwind CSS</span></p>
-      <p>Built Doctor Appointment Booking System with React and Tailwind CSS; learned scheduling, dynamic UI, and responsive design.</p>
-      <div class="project-buttons">
-        <a href="https://github.com/King-Manoj/Doctor-Appointment-Booking-System.git" class="btn repo-btn" target="_blank">GitHub</a>
-        <a href="https://king-manoj.github.io/Doctor-Appointment-Booking-System/" class="btn demo-btn" target="_blank">View Demo</a>
+
+      <div class="skill-card">
+        <h4 class="skill-title">Backend</h4>
+        <ul class="skill-list">
+          <li>Java</li>
+          <li>Servlet</li>
+          <li>JSP</li>
+          <li>Spring-boot</li>
+        </ul>
       </div>
-    </div>
-    <div class="project-card">
-      <img src="project-piano-img.png" alt="Project 3" />
-      <h3>Project Piano</h3>
-      <p><span><strong>Tech Stack used:</strong> HTML, CSS, JavaScript</span></p>
-      <p>Built a virtual piano using HTML, CSS, and JavaScript; learned advanced CSS styling and created interactive keys to play beautiful music</p>
-      <div class="project-buttons">
-        <a href="https://github.com/King-Manoj/Project-Piano.git" class="btn repo-btn" target="_blank">GitHub</a>
-        <a href="https://king-manoj.github.io/Project-Piano/" class="btn demo-btn" target="_blank">View Demo</a>
+
+      <div class="skill-card">
+        <h4 class="skill-title">Database</h4>
+        <ul class="skill-list">
+          <li>MySQL</li>
+          <li>Queries</li>
+          <li>Schema Design</li>
+        </ul>
       </div>
-    </div>
-  </div>
-</section>
 
-
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-  <div class="contact-overlay"></div>
-  <div class="contact-container">
-    <!-- Left Side -->
-    <div class="contact-info">
-      <h2>Contact Me</h2>
-      <ul class="info-list">
-        <li>✉ <a href="mailto:manojcse2025@gmail.com">manojcse2025@gmail.com</a></li>
-        <li>☎ <a href="tel:+917305323443">+91 73053 23443</a></li>
-        <li>
-          🔗 <a href="https://linkedin.com/in/manoj-b-mj" target="_blank">linkedin.com/in/manoj-b-mj</a>
-        </li>
-      </ul>
-
-      <h3>Also connect with me</h3>
-      <div class="social-links">
-        <!-- GitHub -->
-        <a href="https://github.com/King-Manoj" target="_blank" title="GitHub">
-          <img src="github-icon.png" alt="GitHub">
-        </a>
-        <!-- LeetCode -->
-        <a href="https://leetcode.com/u/kingmano2002" target="_blank" title="LeetCode">
-          <img src="leetcode-icon.png" alt="LeetCode">
-        </a>
-        <!-- CodeChef -->
-        <a href="https://www.codechef.com/users/manoj002" target="_blank" title="CodeChef">
-          <img src="codechef-icon.png" alt="CodeChef">
-        </a>
-        <!-- Twitter / X -->
-        <a href="https://x.com/KingManoj69?s=08" target="_blank" title="Twitter">
-          <img src="twitter-icon.png" alt="Twitter">
-        </a>
+      <div class="skill-card">
+        <h4 class="skill-title">Other</h4>
+        <ul class="skill-list">
+          <li>DSA</li>
+          <li>Competitive Coding</li>
+          <li>Problem Solving</li>
+          <li>Git & Github</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Right Side -->
-    <div class="contact-form-container">
-      <h2>Send a Message</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <div class="form-buttons">
-          <button type="submit" class="btn">Send</button>
-          <button type="reset" class="btn reset">Clear</button>
+    <!-- =======================
+         Experience Section
+    ======================== -->
+    <h3 class="section-title" id="experience">Experience</h3>
+    <div class="timeline">
+      <div class="container left current">
+        <div class="content">
+          <h4>Freelance Software Engineer</h4>
+          <span>Present - Self Employed</span>
+          <p>Software solutions & services, DSA training and placement advising</p>
         </div>
-      </form>
-    </div>
-  </div>
-</section>
+      </div>
 
-
-
-<!-- Footer Section -->
-<footer class="footer-section">
-  <div class="footer-container">
-    <!-- About / Branding -->
-    <div class="footer-brand">
-      <h2>Manoj B</h2>
-      <p>Dedicated Software Engineer | Freelance & Mentor</p>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-contact">
-      <h3>Contact</h3>
-      <ul>
-        <li>✉ <a href="mailto:manojcse2025@gmail.com">manojcse2025@gmail.com</a></li>
-        <li>☎ <a href="tel:+917305323443">+91 73053 23443</a></li>
-        <li>🔗 <a href="https://linkedin.com/in/manoj-b-mj" target="_blank">LinkedIn</a></li>
-      </ul>
-    </div>
-
-    <!-- Social Media -->
-    <div class="footer-social">
-      <h3>Follow Me</h3>
-      <div class="social-icons">
-        <a href="https://github.com/King-Manoj" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
-        <a href="https://leetcode.com/u/kingmano2002" target="_blank"><img src="leetcode-icon.png" alt="LeetCode"></a>
-        <a href="https://www.codechef.com/users/manoj002" target="_blank"><img src="codechef-icon.png" alt="CodeChef"></a>
-        <a href="https://x.com/KingManoj69?s=08" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+      <div class="container right">
+        <div class="content">
+          <h4>DSA & Programming Trainer</h4>
+          <span>Adhi College of Engineering</span>
+          <p>Oct 2024 - Dec 2024 (Part-time), Jan 2025 - May 2025 (Full-time)</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 Manoj B. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- =======================
+         Education Section
+    ======================== -->
+    <h3 class="section-title" id="education">Education</h3>
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h4>B.E - Computer Science & Engineering</h4>
+          <span>Adhi College of Engineering & Technology</span>
+          <p>CGPA: 8.5</p>
+        </div>
+      </div>
 
+      <div class="container right">
+        <div class="content">
+          <h4>HSC</h4>
+          <span>St. Francis Matric Higher Secondary School</span>
+          <p>91%</p>
+        </div>
+      </div>
 
+      <div class="container left">
+        <div class="content">
+          <h4>SSLC</h4>
+          <span>St. Francis Matric Higher Secondary School</span>
+          <p><strong>89.4%</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- =======================
+       Projects Section
+  ======================== -->
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="assets/portfolio-img.png" alt="Project 1" />
+        <h3>Personal Portfolio</h3>
+        <p><span><strong>Tech Stack used:</strong> HTML, CSS, JavaScript</span></p>
+        <p>Built my own website, learned responsiveness, implemented interactive features, smooth transitions, and enhanced UI/UX using CSS and JavaScript.</p>
+        <div class="project-buttons">
+          <a href="https://github.com/King-Manoj/Personal-Portfolio---Manoj_B.git" class="btn repo-btn" target="_blank">GitHub</a>
+          <a href="https://king-manoj.github.io/Personal-Portfolio---Manoj_B/" class="btn demo-btn" target="_blank">View Demo</a>
+        </div>
+      </div>
 
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="assets/doctor-appointment-img.png" alt="Project 2" />
+        <h3>Doctor Appointment Booking System</h3>
+        <p><span><strong>Tech Stack used:</strong> HTML, CSS, JavaScript, React, Tailwind CSS</span></p>
+        <p>Built Doctor Appointment Booking System with React and Tailwind CSS; learned scheduling, dynamic UI, and responsive design.</p>
+        <div class="project-buttons">
+          <a href="https://github.com/King-Manoj/Doctor-Appointment-Booking-System.git" class="btn repo-btn" target="_blank">GitHub</a>
+          <a href="https://king-manoj.github.io/Doctor-Appointment-Booking-System/" class="btn demo-btn" target="_blank">View Demo</a>
+        </div>
+      </div>
 
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="assets/project-piano-img.png" alt="Project 3" />
+        <h3>Project Piano</h3>
+        <p><span><strong>Tech Stack used:</strong> HTML, CSS, JavaScript</span></p>
+        <p>Built a virtual piano using HTML, CSS, and JavaScript; learned advanced CSS styling and created interactive keys to play beautiful music</p>
+        <div class="project-buttons">
+          <a href="https://github.com/King-Manoj/Project-Piano.git" class="btn repo-btn" target="_blank">GitHub</a>
+          <a href="https://king-manoj.github.io/Project-Piano/" class="btn demo-btn" target="_blank">View Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- =======================
+       Contact Section
+  ======================== -->
+  <section id="contact" class="contact-section">
+    <div class="contact-overlay"></div>
+    <div class="contact-container">
+      
+      <!-- Left Side: Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Me</h2>
+        <ul class="info-list">
+          <li>✉ <a href="mailto:manojcse2025@gmail.com">manojcse2025@gmail.com</a></li>
+          <li>☎ <a href="tel:+917305323443">+91 73053 23443</a></li>
+          <li>🔗 <a href="https://linkedin.com/in/manoj-b-mj" target="_blank">linkedin.com/in/manoj-b-mj</a></li>
+        </ul>
 
+        <h3>Also connect with me</h3>
+        <div class="social-links">
+          <a href="https://github.com/King-Manoj" target="_blank" title="GitHub">
+            <img src="assets/github-icon.png" alt="GitHub">
+          </a>
+          <a href="https://leetcode.com/u/kingmano2002" target="_blank" title="LeetCode">
+            <img src="assets/leetcode-icon.png" alt="LeetCode">
+          </a>
+          <a href="https://www.codechef.com/users/manoj002" target="_blank" title="CodeChef">
+            <img src="assets/codechef-icon.png" alt="CodeChef">
+          </a>
+          <a href="https://x.com/KingManoj69?s=08" target="_blank" title="Twitter">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+          </a>
+        </div>
+      </div>
 
-  <script src="script.js"></script>
+      <!-- Right Side: Contact Form -->
+      <div class="contact-form-container">
+        <h2>Send a Message</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <div class="form-buttons">
+            <button type="submit" class="btn">Send</button>
+            <button type="reset" class="btn reset">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================
+       Footer Section
+  ======================== -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      
+      <!-- About / Branding -->
+      <div class="footer-brand">
+        <h2>Manoj B</h2>
+        <p>Dedicated Software Engineer | Freelance & Mentor</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>✉ <a href="mailto:manojcse2025@gmail.com">manojcse2025@gmail.com</a></li>
+          <li>☎ <a href="tel:+917305323443">+91 73053 23443</a></li>
+          <li>🔗 <a href="https://linkedin.com/in/manoj-b-mj" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h3>Follow Me</h3>
+        <div class="social-icons">
+          <a href="https://github.com/King-Manoj" target="_blank"><img src="assets/github-icon.png" alt="GitHub"></a>
+          <a href="https://leetcode.com/u/kingmano2002" target="_blank"><img src="assets/leetcode-icon.png" alt="LeetCode"></a>
+          <a href="https://www.codechef.com/users/manoj002" target="_blank"><img src="assets/codechef-icon.png" alt="CodeChef"></a>
+          <a href="https://x.com/KingManoj69?s=08" target="_blank"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Manoj B. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
